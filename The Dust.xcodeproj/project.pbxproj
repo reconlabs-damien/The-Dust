@@ -7,9 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF7D2D0C2564AA010066CE5C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D0B2564AA010066CE5C /* UIColorExtension.swift */; };
+		BF7D2D112564AC7E0066CE5C /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D102564AC7E0066CE5C /* UIImageExtension.swift */; };
+		BF7D2D162564AD9D0066CE5C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D152564AD9D0066CE5C /* UIViewExtension.swift */; };
+		BF7D2D202564B4C10066CE5C /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7D2D1F2564B4C10066CE5C /* TabBar.storyboard */; };
+		BF7D2D292564B59E0066CE5C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D282564B59E0066CE5C /* TabBarController.swift */; };
+		BF7D2D2E2564B6E80066CE5C /* AqiStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7D2D2D2564B6E80066CE5C /* AqiStoryboard.storyboard */; };
+		BF7D2D382564B7600066CE5C /* MapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7D2D372564B7600066CE5C /* MapStoryboard.storyboard */; };
+		BF7D2D3E2564BBA80066CE5C /* AqiBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D3D2564BBA80066CE5C /* AqiBar.swift */; };
+		BF7D2D432564C0BD0066CE5C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D422564C0BD0066CE5C /* MenuViewController.swift */; };
+		BF7D2D4B2564C0F20066CE5C /* MenuStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7D2D4A2564C0F20066CE5C /* MenuStoryboard.storyboard */; };
+		BF7D2D502564C2420066CE5C /* AqiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D4F2564C2420066CE5C /* AqiViewController.swift */; };
+		BF7D2D552564C2A40066CE5C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D542564C2A40066CE5C /* MapViewController.swift */; };
+		BF7D2D5D2564F4740066CE5C /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D5C2564F4740066CE5C /* NoticeViewController.swift */; };
+		BF7D2D622564F4C60066CE5C /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D612564F4C60066CE5C /* AppInfoViewController.swift */; };
+		BF7D2D672564F4DC0066CE5C /* OpinionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D662564F4DC0066CE5C /* OpinionViewController.swift */; };
 		BF84DACB2563E15D008151BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DACA2563E15D008151BE /* AppDelegate.swift */; };
 		BF84DACD2563E15D008151BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DACC2563E15D008151BE /* SceneDelegate.swift */; };
-		BF84DACF2563E15D008151BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DACE2563E15D008151BE /* ViewController.swift */; };
+		BF84DACF2563E15D008151BE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DACE2563E15D008151BE /* MainViewController.swift */; };
 		BF84DAD22563E15D008151BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF84DAD02563E15D008151BE /* Main.storyboard */; };
 		BF84DAD42563E160008151BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF84DAD32563E160008151BE /* Assets.xcassets */; };
 		BF84DAD72563E160008151BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF84DAD52563E160008151BE /* LaunchScreen.storyboard */; };
@@ -35,10 +50,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF7D2D0B2564AA010066CE5C /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		BF7D2D102564AC7E0066CE5C /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		BF7D2D152564AD9D0066CE5C /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		BF7D2D1F2564B4C10066CE5C /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		BF7D2D282564B59E0066CE5C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		BF7D2D2D2564B6E80066CE5C /* AqiStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AqiStoryboard.storyboard; sourceTree = "<group>"; };
+		BF7D2D372564B7600066CE5C /* MapStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapStoryboard.storyboard; sourceTree = "<group>"; };
+		BF7D2D3D2564BBA80066CE5C /* AqiBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqiBar.swift; sourceTree = "<group>"; };
+		BF7D2D422564C0BD0066CE5C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		BF7D2D4A2564C0F20066CE5C /* MenuStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuStoryboard.storyboard; sourceTree = "<group>"; };
+		BF7D2D4F2564C2420066CE5C /* AqiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqiViewController.swift; sourceTree = "<group>"; };
+		BF7D2D542564C2A40066CE5C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BF7D2D5C2564F4740066CE5C /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		BF7D2D612564F4C60066CE5C /* AppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
+		BF7D2D662564F4DC0066CE5C /* OpinionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpinionViewController.swift; sourceTree = "<group>"; };
 		BF84DAC72563E15D008151BE /* The Dust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Dust.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF84DACA2563E15D008151BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF84DACC2563E15D008151BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF84DACE2563E15D008151BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF84DACE2563E15D008151BE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF84DAD12563E15D008151BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF84DAD32563E160008151BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF84DAD62563E160008151BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +106,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF7D2D0A2564A9E00066CE5C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BF7D2D0B2564AA010066CE5C /* UIColorExtension.swift */,
+				BF7D2D102564AC7E0066CE5C /* UIImageExtension.swift */,
+				BF7D2D152564AD9D0066CE5C /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BF7D2D1A2564B0B80066CE5C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF7D2D1B2564B0D30066CE5C /* StoryBoard */,
+				BF84DAD32563E160008151BE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BF7D2D1B2564B0D30066CE5C /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				BF84DAD52563E160008151BE /* LaunchScreen.storyboard */,
+				BF84DAD02563E15D008151BE /* Main.storyboard */,
+				BF7D2D1F2564B4C10066CE5C /* TabBar.storyboard */,
+				BF7D2D2D2564B6E80066CE5C /* AqiStoryboard.storyboard */,
+				BF7D2D372564B7600066CE5C /* MapStoryboard.storyboard */,
+				BF7D2D4A2564C0F20066CE5C /* MenuStoryboard.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		BF7D2D242564B5450066CE5C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF84DACE2563E15D008151BE /* MainViewController.swift */,
+				BF7D2D282564B59E0066CE5C /* TabBarController.swift */,
+				BF7D2D422564C0BD0066CE5C /* MenuViewController.swift */,
+				BF7D2D4F2564C2420066CE5C /* AqiViewController.swift */,
+				BF7D2D542564C2A40066CE5C /* MapViewController.swift */,
+				BF7D2D5C2564F4740066CE5C /* NoticeViewController.swift */,
+				BF7D2D612564F4C60066CE5C /* AppInfoViewController.swift */,
+				BF7D2D662564F4DC0066CE5C /* OpinionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BF7D2D3C2564BB8A0066CE5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF7D2D3D2564BBA80066CE5C /* AqiBar.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BF84DABE2563E15D008151BE = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +184,12 @@
 		BF84DAC92563E15D008151BE /* The Dust */ = {
 			isa = PBXGroup;
 			children = (
+				BF7D2D3C2564BB8A0066CE5C /* Models */,
+				BF7D2D242564B5450066CE5C /* ViewControllers */,
+				BF7D2D1A2564B0B80066CE5C /* Resources */,
+				BF7D2D0A2564A9E00066CE5C /* Extension */,
 				BF84DACA2563E15D008151BE /* AppDelegate.swift */,
 				BF84DACC2563E15D008151BE /* SceneDelegate.swift */,
-				BF84DACE2563E15D008151BE /* ViewController.swift */,
-				BF84DAD02563E15D008151BE /* Main.storyboard */,
-				BF84DAD32563E160008151BE /* Assets.xcassets */,
-				BF84DAD52563E160008151BE /* LaunchScreen.storyboard */,
 				BF84DAD82563E160008151BE /* Info.plist */,
 			);
 			path = "The Dust";
@@ -231,9 +316,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7D2D202564B4C10066CE5C /* TabBar.storyboard in Resources */,
+				BF7D2D2E2564B6E80066CE5C /* AqiStoryboard.storyboard in Resources */,
+				BF7D2D382564B7600066CE5C /* MapStoryboard.storyboard in Resources */,
 				BF84DAD72563E160008151BE /* LaunchScreen.storyboard in Resources */,
 				BF84DAD42563E160008151BE /* Assets.xcassets in Resources */,
 				BF84DAD22563E15D008151BE /* Main.storyboard in Resources */,
+				BF7D2D4B2564C0F20066CE5C /* MenuStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +347,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF84DACF2563E15D008151BE /* ViewController.swift in Sources */,
+				BF7D2D552564C2A40066CE5C /* MapViewController.swift in Sources */,
+				BF7D2D672564F4DC0066CE5C /* OpinionViewController.swift in Sources */,
+				BF7D2D162564AD9D0066CE5C /* UIViewExtension.swift in Sources */,
+				BF84DACF2563E15D008151BE /* MainViewController.swift in Sources */,
+				BF7D2D622564F4C60066CE5C /* AppInfoViewController.swift in Sources */,
+				BF7D2D502564C2420066CE5C /* AqiViewController.swift in Sources */,
 				BF84DACB2563E15D008151BE /* AppDelegate.swift in Sources */,
 				BF84DACD2563E15D008151BE /* SceneDelegate.swift in Sources */,
+				BF7D2D432564C0BD0066CE5C /* MenuViewController.swift in Sources */,
+				BF7D2D292564B59E0066CE5C /* TabBarController.swift in Sources */,
+				BF7D2D112564AC7E0066CE5C /* UIImageExtension.swift in Sources */,
+				BF7D2D0C2564AA010066CE5C /* UIColorExtension.swift in Sources */,
+				BF7D2D5D2564F4740066CE5C /* NoticeViewController.swift in Sources */,
+				BF7D2D3E2564BBA80066CE5C /* AqiBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

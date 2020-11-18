@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="The_Dust" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ESn-pX-qX0">
+                                <rect key="frame" x="79" y="273" width="256" height="350"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The Dust" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEd-sR-Nu8">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="미세먼지 알림 서비스" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcl-0i-P78">
+                                        <rect key="frame" x="0.0" y="65" width="256" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dust" translatesAutoresizingMaskIntoConstraints="NO" id="J4g-8j-rOy">
+                                        <rect key="frame" x="0.0" y="94" width="256" height="256"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IEd-sR-Nu8" secondAttribute="trailing" id="2LZ-Ha-GjY"/>
+                                    <constraint firstItem="IEd-sR-Nu8" firstAttribute="leading" secondItem="ESn-pX-qX0" secondAttribute="leading" id="AAT-LK-Lzf"/>
+                                    <constraint firstItem="Hcl-0i-P78" firstAttribute="leading" secondItem="ESn-pX-qX0" secondAttribute="leading" id="Avk-Mc-uUl"/>
+                                    <constraint firstAttribute="trailing" secondItem="J4g-8j-rOy" secondAttribute="trailing" id="HfP-Dn-dfB"/>
+                                    <constraint firstAttribute="height" constant="350" id="PZ6-zb-FYd"/>
+                                    <constraint firstAttribute="width" constant="256" id="di6-Tm-lX1"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hcl-0i-P78" secondAttribute="trailing" id="fKE-8h-cxT"/>
+                                    <constraint firstItem="J4g-8j-rOy" firstAttribute="leading" secondItem="ESn-pX-qX0" secondAttribute="leading" id="o3F-E4-sGh"/>
+                                    <constraint firstItem="J4g-8j-rOy" firstAttribute="top" secondItem="Hcl-0i-P78" secondAttribute="bottom" constant="5" id="pnh-R2-Rdd"/>
+                                    <constraint firstItem="IEd-sR-Nu8" firstAttribute="top" secondItem="ESn-pX-qX0" secondAttribute="top" id="pz5-Ui-Dok"/>
+                                    <constraint firstItem="Hcl-0i-P78" firstAttribute="top" secondItem="IEd-sR-Nu8" secondAttribute="bottom" constant="5" id="ru6-n7-Gp4"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="ESn-pX-qX0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EUh-b9-pph"/>
+                            <constraint firstItem="ESn-pX-qX0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YY4-D0-2m6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bellUIImage" destination="J4g-8j-rOy" id="Gk5-je-lYG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dust" width="512" height="512"/>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
