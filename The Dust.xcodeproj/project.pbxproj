@@ -22,6 +22,9 @@
 		BF7D2D5D2564F4740066CE5C /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D5C2564F4740066CE5C /* NoticeViewController.swift */; };
 		BF7D2D622564F4C60066CE5C /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D612564F4C60066CE5C /* AppInfoViewController.swift */; };
 		BF7D2D672564F4DC0066CE5C /* OpinionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D662564F4DC0066CE5C /* OpinionViewController.swift */; };
+		BF7D2D6D256507DB0066CE5C /* AqiResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D6C256507DB0066CE5C /* AqiResponseString.swift */; };
+		BF7D2D72256509780066CE5C /* AqiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D71256509780066CE5C /* AqiService.swift */; };
+		BF7D2D77256509EA0066CE5C /* WeatherResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D76256509EA0066CE5C /* WeatherResponseString.swift */; };
 		BF84DACB2563E15D008151BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DACA2563E15D008151BE /* AppDelegate.swift */; };
 		BF84DACD2563E15D008151BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DACC2563E15D008151BE /* SceneDelegate.swift */; };
 		BF84DACF2563E15D008151BE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DACE2563E15D008151BE /* MainViewController.swift */; };
@@ -65,6 +68,9 @@
 		BF7D2D5C2564F4740066CE5C /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		BF7D2D612564F4C60066CE5C /* AppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
 		BF7D2D662564F4DC0066CE5C /* OpinionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpinionViewController.swift; sourceTree = "<group>"; };
+		BF7D2D6C256507DB0066CE5C /* AqiResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqiResponseString.swift; sourceTree = "<group>"; };
+		BF7D2D71256509780066CE5C /* AqiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqiService.swift; sourceTree = "<group>"; };
+		BF7D2D76256509EA0066CE5C /* WeatherResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseString.swift; sourceTree = "<group>"; };
 		BF84DAC72563E15D008151BE /* The Dust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Dust.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF84DACA2563E15D008151BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF84DACC2563E15D008151BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 		BF7D2D1A2564B0B80066CE5C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BF7D2D6B256507C20066CE5C /* APIService */,
 				BF7D2D1B2564B0D30066CE5C /* StoryBoard */,
 				BF84DAD32563E160008151BE /* Assets.xcassets */,
 			);
@@ -159,6 +166,16 @@
 				BF7D2D3D2564BBA80066CE5C /* AqiBar.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BF7D2D6B256507C20066CE5C /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				BF7D2D6C256507DB0066CE5C /* AqiResponseString.swift */,
+				BF7D2D71256509780066CE5C /* AqiService.swift */,
+				BF7D2D76256509EA0066CE5C /* WeatherResponseString.swift */,
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 		BF84DABE2563E15D008151BE = {
@@ -349,10 +366,13 @@
 			files = (
 				BF7D2D552564C2A40066CE5C /* MapViewController.swift in Sources */,
 				BF7D2D672564F4DC0066CE5C /* OpinionViewController.swift in Sources */,
+				BF7D2D6D256507DB0066CE5C /* AqiResponseString.swift in Sources */,
 				BF7D2D162564AD9D0066CE5C /* UIViewExtension.swift in Sources */,
+				BF7D2D77256509EA0066CE5C /* WeatherResponseString.swift in Sources */,
 				BF84DACF2563E15D008151BE /* MainViewController.swift in Sources */,
 				BF7D2D622564F4C60066CE5C /* AppInfoViewController.swift in Sources */,
 				BF7D2D502564C2420066CE5C /* AqiViewController.swift in Sources */,
+				BF7D2D72256509780066CE5C /* AqiService.swift in Sources */,
 				BF84DACB2563E15D008151BE /* AppDelegate.swift in Sources */,
 				BF84DACD2563E15D008151BE /* SceneDelegate.swift in Sources */,
 				BF7D2D432564C0BD0066CE5C /* MenuViewController.swift in Sources */,
