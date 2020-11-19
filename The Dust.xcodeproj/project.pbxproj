@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043CC3D1B64F3636CE41D688 /* Pods_The_DustTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C802E33A536B3C5AA39C179 /* Pods_The_DustTests.framework */; };
+		5858BCC8668A52DF11DAA9DF /* Pods_The_Dust_The_DustUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5FBBA0FBFCAA39EADC1F2B /* Pods_The_Dust_The_DustUITests.framework */; };
+		BF2AD29E256647AA003C03A9 /* PopupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2AD29D256647AA003C03A9 /* PopupStoryboard.storyboard */; };
 		BF7D2D0C2564AA010066CE5C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D0B2564AA010066CE5C /* UIColorExtension.swift */; };
 		BF7D2D112564AC7E0066CE5C /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D102564AC7E0066CE5C /* UIImageExtension.swift */; };
 		BF7D2D162564AD9D0066CE5C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D2D152564AD9D0066CE5C /* UIViewExtension.swift */; };
@@ -33,6 +36,9 @@
 		BF84DAD72563E160008151BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF84DAD52563E160008151BE /* LaunchScreen.storyboard */; };
 		BF84DAE22563E160008151BE /* The_DustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DAE12563E160008151BE /* The_DustTests.swift */; };
 		BF84DAED2563E160008151BE /* The_DustUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DAEC2563E160008151BE /* The_DustUITests.swift */; };
+		BFF8DD5E25669630008E8A7C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8DD5D25669630008E8A7C /* PopupViewController.swift */; };
+		BFF8DD6B25669ED5008E8A7C /* AqiChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8DD6A25669ED5008E8A7C /* AqiChartView.swift */; };
+		DD9E8DD699B892B852AFDEB1 /* Pods_The_Dust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51EF378DCB31F38A943EC0F4 /* Pods_The_Dust.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C802E33A536B3C5AA39C179 /* Pods_The_DustTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_DustTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B5FBBA0FBFCAA39EADC1F2B /* Pods_The_Dust_The_DustUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Dust_The_DustUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34860D074D87EEB5DE4717D8 /* Pods-The Dust-The DustUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Dust-The DustUITests.debug.xcconfig"; path = "Target Support Files/Pods-The Dust-The DustUITests/Pods-The Dust-The DustUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		51EF378DCB31F38A943EC0F4 /* Pods_The_Dust.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Dust.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D31E33B2AAAC7A57DBE82E0 /* Pods-The DustTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The DustTests.debug.xcconfig"; path = "Target Support Files/Pods-The DustTests/Pods-The DustTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AEBC7231014AF2DBA337E075 /* Pods-The DustTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The DustTests.release.xcconfig"; path = "Target Support Files/Pods-The DustTests/Pods-The DustTests.release.xcconfig"; sourceTree = "<group>"; };
+		B784802C3050D8DB91BC449E /* Pods-The Dust-The DustUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Dust-The DustUITests.release.xcconfig"; path = "Target Support Files/Pods-The Dust-The DustUITests/Pods-The Dust-The DustUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BAF352CA826175958ED60A28 /* Pods-The Dust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Dust.release.xcconfig"; path = "Target Support Files/Pods-The Dust/Pods-The Dust.release.xcconfig"; sourceTree = "<group>"; };
+		BF2AD29D256647AA003C03A9 /* PopupStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopupStoryboard.storyboard; sourceTree = "<group>"; };
 		BF7D2D0B2564AA010066CE5C /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		BF7D2D102564AC7E0066CE5C /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		BF7D2D152564AD9D0066CE5C /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -85,6 +100,9 @@
 		BF84DAE82563E160008151BE /* The DustUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The DustUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF84DAEC2563E160008151BE /* The_DustUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_DustUITests.swift; sourceTree = "<group>"; };
 		BF84DAEE2563E160008151BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF8DD5D25669630008E8A7C /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		BFF8DD6A25669ED5008E8A7C /* AqiChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqiChartView.swift; sourceTree = "<group>"; };
+		F530545D6CB92601E063EA10 /* Pods-The Dust.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Dust.debug.xcconfig"; path = "Target Support Files/Pods-The Dust/Pods-The Dust.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9E8DD699B892B852AFDEB1 /* Pods_The_Dust.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043CC3D1B64F3636CE41D688 /* Pods_The_DustTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5858BCC8668A52DF11DAA9DF /* Pods_The_Dust_The_DustUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +162,7 @@
 				BF7D2D2D2564B6E80066CE5C /* AqiStoryboard.storyboard */,
 				BF7D2D372564B7600066CE5C /* MapStoryboard.storyboard */,
 				BF7D2D4A2564C0F20066CE5C /* MenuStoryboard.storyboard */,
+				BF2AD29D256647AA003C03A9 /* PopupStoryboard.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -156,6 +178,8 @@
 				BF7D2D5C2564F4740066CE5C /* NoticeViewController.swift */,
 				BF7D2D612564F4C60066CE5C /* AppInfoViewController.swift */,
 				BF7D2D662564F4DC0066CE5C /* OpinionViewController.swift */,
+				BFF8DD5D25669630008E8A7C /* PopupViewController.swift */,
+				BFF8DD6A25669ED5008E8A7C /* AqiChartView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -185,6 +209,8 @@
 				BF84DAE02563E160008151BE /* The DustTests */,
 				BF84DAEB2563E160008151BE /* The DustUITests */,
 				BF84DAC82563E15D008151BE /* Products */,
+				D6772901B959222CF0C34E1A /* Pods */,
+				FD84445FA0B920A35B5B4B92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,6 +256,29 @@
 			path = "The DustUITests";
 			sourceTree = "<group>";
 		};
+		D6772901B959222CF0C34E1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F530545D6CB92601E063EA10 /* Pods-The Dust.debug.xcconfig */,
+				BAF352CA826175958ED60A28 /* Pods-The Dust.release.xcconfig */,
+				34860D074D87EEB5DE4717D8 /* Pods-The Dust-The DustUITests.debug.xcconfig */,
+				B784802C3050D8DB91BC449E /* Pods-The Dust-The DustUITests.release.xcconfig */,
+				6D31E33B2AAAC7A57DBE82E0 /* Pods-The DustTests.debug.xcconfig */,
+				AEBC7231014AF2DBA337E075 /* Pods-The DustTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FD84445FA0B920A35B5B4B92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51EF378DCB31F38A943EC0F4 /* Pods_The_Dust.framework */,
+				1B5FBBA0FBFCAA39EADC1F2B /* Pods_The_Dust_The_DustUITests.framework */,
+				0C802E33A536B3C5AA39C179 /* Pods_The_DustTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF84DAF12563E160008151BE /* Build configuration list for PBXNativeTarget "The Dust" */;
 			buildPhases = (
+				F9194B51E510BE8A7BD51E39 /* [CP] Check Pods Manifest.lock */,
 				BF84DAC32563E15D008151BE /* Sources */,
 				BF84DAC42563E15D008151BE /* Frameworks */,
 				BF84DAC52563E15D008151BE /* Resources */,
+				83E0D1FD188441488E8CD011 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +305,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF84DAF42563E160008151BE /* Build configuration list for PBXNativeTarget "The DustTests" */;
 			buildPhases = (
+				A5AA7AE3F304EDFA82EC5380 /* [CP] Check Pods Manifest.lock */,
 				BF84DAD92563E160008151BE /* Sources */,
 				BF84DADA2563E160008151BE /* Frameworks */,
 				BF84DADB2563E160008151BE /* Resources */,
@@ -272,9 +324,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF84DAF72563E160008151BE /* Build configuration list for PBXNativeTarget "The DustUITests" */;
 			buildPhases = (
+				6F1663310EED147239B9C33E /* [CP] Check Pods Manifest.lock */,
 				BF84DAE42563E160008151BE /* Sources */,
 				BF84DAE52563E160008151BE /* Frameworks */,
 				BF84DAE62563E160008151BE /* Resources */,
+				E10A6E86ADBDBA8D235A2CE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -339,6 +393,7 @@
 				BF84DAD72563E160008151BE /* LaunchScreen.storyboard in Resources */,
 				BF84DAD42563E160008151BE /* Assets.xcassets in Resources */,
 				BF84DAD22563E15D008151BE /* Main.storyboard in Resources */,
+				BF2AD29E256647AA003C03A9 /* PopupStoryboard.storyboard in Resources */,
 				BF7D2D4B2564C0F20066CE5C /* MenuStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +414,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F1663310EED147239B9C33E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The Dust-The DustUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83E0D1FD188441488E8CD011 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Dust/Pods-The Dust-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Dust/Pods-The Dust-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The Dust/Pods-The Dust-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5AA7AE3F304EDFA82EC5380 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The DustTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E10A6E86ADBDBA8D235A2CE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Dust-The DustUITests/Pods-The Dust-The DustUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Dust-The DustUITests/Pods-The Dust-The DustUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The Dust-The DustUITests/Pods-The Dust-The DustUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9194B51E510BE8A7BD51E39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The Dust-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF84DAC32563E15D008151BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -369,6 +527,7 @@
 				BF7D2D6D256507DB0066CE5C /* AqiResponseString.swift in Sources */,
 				BF7D2D162564AD9D0066CE5C /* UIViewExtension.swift in Sources */,
 				BF7D2D77256509EA0066CE5C /* WeatherResponseString.swift in Sources */,
+				BFF8DD5E25669630008E8A7C /* PopupViewController.swift in Sources */,
 				BF84DACF2563E15D008151BE /* MainViewController.swift in Sources */,
 				BF7D2D622564F4C60066CE5C /* AppInfoViewController.swift in Sources */,
 				BF7D2D502564C2420066CE5C /* AqiViewController.swift in Sources */,
@@ -376,6 +535,7 @@
 				BF84DACB2563E15D008151BE /* AppDelegate.swift in Sources */,
 				BF84DACD2563E15D008151BE /* SceneDelegate.swift in Sources */,
 				BF7D2D432564C0BD0066CE5C /* MenuViewController.swift in Sources */,
+				BFF8DD6B25669ED5008E8A7C /* AqiChartView.swift in Sources */,
 				BF7D2D292564B59E0066CE5C /* TabBarController.swift in Sources */,
 				BF7D2D112564AC7E0066CE5C /* UIImageExtension.swift in Sources */,
 				BF7D2D0C2564AA010066CE5C /* UIColorExtension.swift in Sources */,
@@ -553,6 +713,7 @@
 		};
 		BF84DAF22563E160008151BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F530545D6CB92601E063EA10 /* Pods-The Dust.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -572,6 +733,7 @@
 		};
 		BF84DAF32563E160008151BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAF352CA826175958ED60A28 /* Pods-The Dust.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -591,6 +753,7 @@
 		};
 		BF84DAF52563E160008151BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D31E33B2AAAC7A57DBE82E0 /* Pods-The DustTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -613,6 +776,7 @@
 		};
 		BF84DAF62563E160008151BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEBC7231014AF2DBA337E075 /* Pods-The DustTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -635,6 +799,7 @@
 		};
 		BF84DAF82563E160008151BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34860D074D87EEB5DE4717D8 /* Pods-The Dust-The DustUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -655,6 +820,7 @@
 		};
 		BF84DAF92563E160008151BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B784802C3050D8DB91BC449E /* Pods-The Dust-The DustUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
