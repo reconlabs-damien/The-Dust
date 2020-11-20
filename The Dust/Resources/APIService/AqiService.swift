@@ -4,13 +4,12 @@
 //
 //  Created by Jun on 2020/11/18.
 //
-
 import Foundation
 
 class AqiService {
     static let shared = AqiService()
     
-    static let aqiKey = "g5wuVXrLzJMBI9kR2gmdXm6ltsn0zYEicoOG7g2xNHZnGZVp9v7znsIO45M2l7R6rlE5wiD%2FjtIZupMYvyN2Pg%3D%3D"
+    static let aqiKey = "yPNAApocMDtWisXB65oBXC41r48AKcNH3sTVc09ZzZGjs%2BDaWGZK3a%2BMKDC5CdnXfCG6UJ7pR%2F3y5f0mFOdzOQ%3D%3D"
     static let aqiAddress1 = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName="
     static let aqiAddress2 = "&dataTerm=month&pageNo=1&numOfRows=10&ServiceKey=g5wuVXrLzJMBI9kR2gmdXm6ltsn0zYEicoOG7g2xNHZnGZVp9v7znsIO45M2l7R6rlE5wiD%2FjtIZupMYvyN2Pg%3D%3D&ver=1.3&_returnType=json"
     
@@ -37,4 +36,3 @@ class AqiService {
     }
     
 }
-

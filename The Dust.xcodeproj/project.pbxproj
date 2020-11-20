@@ -36,6 +36,9 @@
 		BF84DAD72563E160008151BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF84DAD52563E160008151BE /* LaunchScreen.storyboard */; };
 		BF84DAE22563E160008151BE /* The_DustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DAE12563E160008151BE /* The_DustTests.swift */; };
 		BF84DAED2563E160008151BE /* The_DustUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DAEC2563E160008151BE /* The_DustUITests.swift */; };
+		BFDF525A2567D0E20041C7CA /* AqiSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF52592567D0E20041C7CA /* AqiSlider.swift */; };
+		BFDF52632567D3010041C7CA /* AqiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF52622567D3010041C7CA /* AqiDetailViewController.swift */; };
+		BFDF52692567E7170041C7CA /* AqiNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF52682567E7170041C7CA /* AqiNavViewController.swift */; };
 		BFF8DD5E25669630008E8A7C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8DD5D25669630008E8A7C /* PopupViewController.swift */; };
 		BFF8DD6B25669ED5008E8A7C /* AqiChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8DD6A25669ED5008E8A7C /* AqiChartView.swift */; };
 		DD9E8DD699B892B852AFDEB1 /* Pods_The_Dust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51EF378DCB31F38A943EC0F4 /* Pods_The_Dust.framework */; };
@@ -100,6 +103,9 @@
 		BF84DAE82563E160008151BE /* The DustUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The DustUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF84DAEC2563E160008151BE /* The_DustUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_DustUITests.swift; sourceTree = "<group>"; };
 		BF84DAEE2563E160008151BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFDF52592567D0E20041C7CA /* AqiSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqiSlider.swift; sourceTree = "<group>"; };
+		BFDF52622567D3010041C7CA /* AqiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqiDetailViewController.swift; sourceTree = "<group>"; };
+		BFDF52682567E7170041C7CA /* AqiNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqiNavViewController.swift; sourceTree = "<group>"; };
 		BFF8DD5D25669630008E8A7C /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		BFF8DD6A25669ED5008E8A7C /* AqiChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqiChartView.swift; sourceTree = "<group>"; };
 		F530545D6CB92601E063EA10 /* Pods-The Dust.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Dust.debug.xcconfig"; path = "Target Support Files/Pods-The Dust/Pods-The Dust.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,16 +176,12 @@
 		BF7D2D242564B5450066CE5C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BF84DACE2563E15D008151BE /* MainViewController.swift */,
-				BF7D2D282564B59E0066CE5C /* TabBarController.swift */,
-				BF7D2D422564C0BD0066CE5C /* MenuViewController.swift */,
-				BF7D2D4F2564C2420066CE5C /* AqiViewController.swift */,
-				BF7D2D542564C2A40066CE5C /* MapViewController.swift */,
-				BF7D2D5C2564F4740066CE5C /* NoticeViewController.swift */,
-				BF7D2D612564F4C60066CE5C /* AppInfoViewController.swift */,
-				BF7D2D662564F4DC0066CE5C /* OpinionViewController.swift */,
-				BFF8DD5D25669630008E8A7C /* PopupViewController.swift */,
-				BFF8DD6A25669ED5008E8A7C /* AqiChartView.swift */,
+				BFDF52672567E6DE0041C7CA /* AqiVC */,
+				BFDF52612567D2330041C7CA /* AqiDetailVC */,
+				BFDF52582567D08F0041C7CA /* PopupVC */,
+				BFDF52572567CEF10041C7CA /* MapVC */,
+				BFDF52562567CEB90041C7CA /* LaunchVC */,
+				BFDF52552567CE790041C7CA /* MenuVC */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -254,6 +256,61 @@
 				BF84DAEE2563E160008151BE /* Info.plist */,
 			);
 			path = "The DustUITests";
+			sourceTree = "<group>";
+		};
+		BFDF52552567CE790041C7CA /* MenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				BF7D2D422564C0BD0066CE5C /* MenuViewController.swift */,
+				BF7D2D662564F4DC0066CE5C /* OpinionViewController.swift */,
+				BF7D2D612564F4C60066CE5C /* AppInfoViewController.swift */,
+				BF7D2D5C2564F4740066CE5C /* NoticeViewController.swift */,
+			);
+			path = MenuVC;
+			sourceTree = "<group>";
+		};
+		BFDF52562567CEB90041C7CA /* LaunchVC */ = {
+			isa = PBXGroup;
+			children = (
+				BF7D2D282564B59E0066CE5C /* TabBarController.swift */,
+				BF84DACE2563E15D008151BE /* MainViewController.swift */,
+			);
+			path = LaunchVC;
+			sourceTree = "<group>";
+		};
+		BFDF52572567CEF10041C7CA /* MapVC */ = {
+			isa = PBXGroup;
+			children = (
+				BF7D2D542564C2A40066CE5C /* MapViewController.swift */,
+			);
+			path = MapVC;
+			sourceTree = "<group>";
+		};
+		BFDF52582567D08F0041C7CA /* PopupVC */ = {
+			isa = PBXGroup;
+			children = (
+				BFF8DD5D25669630008E8A7C /* PopupViewController.swift */,
+				BFDF52592567D0E20041C7CA /* AqiSlider.swift */,
+			);
+			path = PopupVC;
+			sourceTree = "<group>";
+		};
+		BFDF52612567D2330041C7CA /* AqiDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				BFDF52622567D3010041C7CA /* AqiDetailViewController.swift */,
+			);
+			path = AqiDetailVC;
+			sourceTree = "<group>";
+		};
+		BFDF52672567E6DE0041C7CA /* AqiVC */ = {
+			isa = PBXGroup;
+			children = (
+				BF7D2D4F2564C2420066CE5C /* AqiViewController.swift */,
+				BFF8DD6A25669ED5008E8A7C /* AqiChartView.swift */,
+				BFDF52682567E7170041C7CA /* AqiNavViewController.swift */,
+			);
+			path = AqiVC;
 			sourceTree = "<group>";
 		};
 		D6772901B959222CF0C34E1A /* Pods */ = {
@@ -522,6 +579,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDF52632567D3010041C7CA /* AqiDetailViewController.swift in Sources */,
+				BFDF525A2567D0E20041C7CA /* AqiSlider.swift in Sources */,
 				BF7D2D552564C2A40066CE5C /* MapViewController.swift in Sources */,
 				BF7D2D672564F4DC0066CE5C /* OpinionViewController.swift in Sources */,
 				BF7D2D6D256507DB0066CE5C /* AqiResponseString.swift in Sources */,
@@ -536,6 +595,7 @@
 				BF84DACD2563E15D008151BE /* SceneDelegate.swift in Sources */,
 				BF7D2D432564C0BD0066CE5C /* MenuViewController.swift in Sources */,
 				BFF8DD6B25669ED5008E8A7C /* AqiChartView.swift in Sources */,
+				BFDF52692567E7170041C7CA /* AqiNavViewController.swift in Sources */,
 				BF7D2D292564B59E0066CE5C /* TabBarController.swift in Sources */,
 				BF7D2D112564AC7E0066CE5C /* UIImageExtension.swift in Sources */,
 				BF7D2D0C2564AA010066CE5C /* UIColorExtension.swift in Sources */,

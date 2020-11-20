@@ -11,7 +11,7 @@
         <!--AQI-->
         <scene sceneID="6hV-Y2-OTh">
             <objects>
-                <navigationController id="UL5-Vh-tlB" sceneMemberID="viewController">
+                <navigationController id="UL5-Vh-tlB" customClass="AqiNavViewController" customModule="The_Dust" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="AQI" image="person" catalog="system" id="adh-oL-Svv"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hEy-Qd-MEW">
@@ -50,6 +50,9 @@
                                                         </constraints>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="arrow.2.circlepath" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="moveDetail:" destination="abL-17-Qoi" eventType="touchUpInside" id="gWK-bB-VUy"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현위치" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEl-fS-q5i">
                                                         <rect key="frame" x="42.333333333333336" y="11" width="39.000000000000007" height="18"/>
@@ -79,48 +82,56 @@
                                                                             <constraint firstAttribute="width" constant="1" id="Dap-Wg-W4d"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미세먼지 &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqk-Qa-B11">
-                                                                        <rect key="frame" x="10" y="13" width="168.66666666666666" height="17"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초미세먼지 &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMD-nm-Tfe">
-                                                                        <rect key="frame" x="199.66666666666663" y="13" width="168.33333333333337" height="15.666666666666664"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- ㎍/㎥" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dM-zs-xiU">
-                                                                        <rect key="frame" x="199.66666666666663" y="38.666666666666686" width="168.33333333333337" height="20.333333333333329"/>
+                                                                        <rect key="frame" x="199.66666666666663" y="52" width="168.33333333333337" height="20.333333333333329"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- ㎍/㎥" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8P-bl-WL3">
-                                                                        <rect key="frame" x="10" y="40" width="168.66666666666666" height="20.333333333333329"/>
+                                                                        <rect key="frame" x="10" y="52" width="168.66666666666666" height="20.333333333333329"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agu-DX-UJb">
+                                                                        <rect key="frame" x="10" y="13" width="168.66666666666666" height="29"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <state key="normal" title="미세먼지 &gt;">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="clickPm10Btn:" destination="abL-17-Qoi" eventType="touchUpInside" id="TSV-6o-uzJ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11h-cX-eXO">
+                                                                        <rect key="frame" x="199.66666666666663" y="13" width="168.33333333333337" height="29"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <state key="normal" title="초미세먼지 &gt;">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="clickPm25Btn:" destination="abL-17-Qoi" eventType="touchUpInside" id="glC-FG-9I4"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
+                                                                    <constraint firstItem="agu-DX-UJb" firstAttribute="leading" secondItem="EVB-jM-CoI" secondAttribute="leading" constant="10" id="13I-TO-PDm"/>
                                                                     <constraint firstItem="A8P-bl-WL3" firstAttribute="leading" secondItem="EVB-jM-CoI" secondAttribute="leading" constant="10" id="7jp-gt-WQz"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="tMD-nm-Tfe" secondAttribute="trailing" constant="10" id="86Z-DK-rDm"/>
+                                                                    <constraint firstItem="A8P-bl-WL3" firstAttribute="top" secondItem="agu-DX-UJb" secondAttribute="bottom" constant="10" id="EMO-ID-a1w"/>
+                                                                    <constraint firstItem="7Ce-Ib-QI2" firstAttribute="leading" secondItem="agu-DX-UJb" secondAttribute="trailing" constant="10" id="Huv-kV-qYB"/>
+                                                                    <constraint firstItem="agu-DX-UJb" firstAttribute="top" secondItem="EVB-jM-CoI" secondAttribute="top" constant="13" id="Kdn-fw-g92"/>
                                                                     <constraint firstAttribute="trailing" secondItem="6dM-zs-xiU" secondAttribute="trailing" constant="10" id="U8W-PO-Cxi"/>
-                                                                    <constraint firstItem="tMD-nm-Tfe" firstAttribute="top" secondItem="EVB-jM-CoI" secondAttribute="top" constant="13" id="Y3k-uR-Jrh"/>
                                                                     <constraint firstItem="7Ce-Ib-QI2" firstAttribute="leading" secondItem="A8P-bl-WL3" secondAttribute="trailing" constant="10" id="bR9-Vs-rrL"/>
-                                                                    <constraint firstItem="xqk-Qa-B11" firstAttribute="leading" secondItem="EVB-jM-CoI" secondAttribute="leading" constant="10" id="cLZ-Ct-eNB"/>
-                                                                    <constraint firstItem="7Ce-Ib-QI2" firstAttribute="leading" secondItem="xqk-Qa-B11" secondAttribute="trailing" constant="10" id="guq-Tt-VxM"/>
                                                                     <constraint firstAttribute="height" constant="100" id="idL-Pi-Q2s"/>
-                                                                    <constraint firstItem="xqk-Qa-B11" firstAttribute="top" secondItem="EVB-jM-CoI" secondAttribute="top" constant="13" id="oJM-II-t0I"/>
-                                                                    <constraint firstItem="A8P-bl-WL3" firstAttribute="top" secondItem="xqk-Qa-B11" secondAttribute="bottom" constant="10" id="pTK-SB-vSG"/>
-                                                                    <constraint firstItem="tMD-nm-Tfe" firstAttribute="leading" secondItem="7Ce-Ib-QI2" secondAttribute="trailing" constant="10" id="qMp-mR-1b9"/>
+                                                                    <constraint firstItem="11h-cX-eXO" firstAttribute="leading" secondItem="7Ce-Ib-QI2" secondAttribute="trailing" constant="10" id="kz5-SW-JUn"/>
+                                                                    <constraint firstItem="6dM-zs-xiU" firstAttribute="top" secondItem="11h-cX-eXO" secondAttribute="bottom" constant="10" id="oR2-Cd-AKB"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="11h-cX-eXO" secondAttribute="trailing" constant="10" id="rRQ-7X-yQf"/>
                                                                     <constraint firstItem="7Ce-Ib-QI2" firstAttribute="centerX" secondItem="EVB-jM-CoI" secondAttribute="centerX" id="tno-bs-dAu"/>
+                                                                    <constraint firstItem="11h-cX-eXO" firstAttribute="top" secondItem="EVB-jM-CoI" secondAttribute="top" constant="13" id="ueE-cZ-gpd"/>
                                                                     <constraint firstItem="6dM-zs-xiU" firstAttribute="leading" secondItem="7Ce-Ib-QI2" secondAttribute="trailing" constant="10" id="v7o-zq-Qad"/>
                                                                     <constraint firstAttribute="bottom" secondItem="7Ce-Ib-QI2" secondAttribute="bottom" constant="10" id="wuZ-EZ-i3Q"/>
-                                                                    <constraint firstItem="6dM-zs-xiU" firstAttribute="top" secondItem="tMD-nm-Tfe" secondAttribute="bottom" constant="10" id="xIs-iL-ItL"/>
                                                                     <constraint firstItem="7Ce-Ib-QI2" firstAttribute="top" secondItem="EVB-jM-CoI" secondAttribute="top" constant="10" id="xV8-Xw-B75"/>
                                                                 </constraints>
                                                             </view>
@@ -363,10 +374,10 @@
             </objects>
             <point key="canvasLocation" x="-1333.3333333333335" y="-188.83928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Aqi Detail View Controller-->
         <scene sceneID="wKu-db-nFO">
             <objects>
-                <viewController id="BaO-AG-Tfb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AqiDetailViewController" id="BaO-AG-Tfb" customClass="AqiDetailViewController" customModule="The_Dust" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ibs-VT-MK1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -767,10 +778,28 @@
                             <constraint firstItem="WnQ-K8-fZH" firstAttribute="trailing" secondItem="gtk-ur-hy1" secondAttribute="trailing" constant="18" id="wtA-Bi-sbZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activeLabel" destination="QsB-qq-Meg" id="cMi-Ex-7GN"/>
+                        <outlet property="activeView" destination="gtk-ur-hy1" id="0J9-AU-pe9"/>
+                        <outlet property="coLabel" destination="LVs-ss-oA3" id="pKc-vM-UOc"/>
+                        <outlet property="coView" destination="V2h-qc-xDV" id="3OO-1d-4Rn"/>
+                        <outlet property="imageContainView1" destination="XJQ-zW-kke" id="R8d-LM-JyY"/>
+                        <outlet property="imageContainView2" destination="PUd-0f-5ey" id="o1a-kj-7Cr"/>
+                        <outlet property="imageContainView3" destination="yhL-mY-TP2" id="Tqb-Yn-Tk6"/>
+                        <outlet property="noView" destination="piP-zL-nkW" id="PCI-7K-lre"/>
+                        <outlet property="ozonView" destination="syW-Fa-2TB" id="c1t-Qp-pjB"/>
+                        <outlet property="ozoneLabel" destination="twN-RW-B0Z" id="x2z-Hv-tgm"/>
+                        <outlet property="pm10Label" destination="SH0-nA-jnH" id="dBN-Hs-2DN"/>
+                        <outlet property="pm10View" destination="cQw-mQ-ucf" id="ZNU-2b-J7B"/>
+                        <outlet property="pm25Label" destination="tbM-wg-1Tu" id="YlN-th-em1"/>
+                        <outlet property="pm25View" destination="QCv-Tf-Xmn" id="ds6-81-m49"/>
+                        <outlet property="soLabel" destination="dOu-jm-4Mg" id="ggS-z3-Asd"/>
+                        <outlet property="soView" destination="1A3-yN-K6X" id="Xcn-mk-Qph"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dF3-Th-fiX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-192" y="-205"/>
+            <point key="canvasLocation" x="-177" y="-218"/>
         </scene>
     </scenes>
     <resources>

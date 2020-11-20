@@ -22,7 +22,7 @@ class AqiViewController: UIViewController, CLLocationManagerDelegate {
     
     //MARK: ChartWholeView
     @IBOutlet weak var chartWholeView: UIView!
-    @IBOutlet weak var graphView: UIView!
+    @IBOutlet weak var graphView: AqiChartView!
     @IBOutlet weak var goDetailButton: UIButton!
     
     //MARK: Weather VIew
@@ -83,6 +83,12 @@ class AqiViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         locationManager.startMonitoringSignificantLocationChanges()
         
+        self.animateEmojiImage()
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: true, block: { _ in
+            self.animateEmojiImage()
+        })
+        
+        self.connectWeatherAPI()
         
     }
     
@@ -141,7 +147,21 @@ class AqiViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
     }
-
+    
+    //MARK: 더보기 페이지 이동
+    @IBAction func moveDetail(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(identifier: "AqiDetailViewController") as! AqiDetailViewController
+        
+        vc.pm10Str = self.aqiDataSet[0].list![0].pm10Value ?? ""
+        vc.pm25Str = self.aqiDataSet[0].list![0].pm25Value ?? ""
+        vc.ozoneStr = self.aqiDataSet[0].list![0].o3Value ?? ""
+        vc.coStr = self.aqiDataSet[0].list![0].coValue ?? ""
+        vc.soStr = self.aqiDataSet[0].list![0].so2Value ?? ""
+        vc.noStr = self.aqiDataSet[0].list![0].no2Value ?? ""
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     //MARK: emoji animation
     func animateEmojiImage() {
         self.emojiImageView.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
@@ -162,11 +182,12 @@ class AqiViewController: UIViewController, CLLocationManagerDelegate {
             if let object = try? decoder.decode(AqiResponseString.self, from: data) {
                 self.aqiDataSet = [object] as! [AqiResponseString]
                 
-                for aqiDouble in self.aqiDataSet[0].list! {
-                    let doubleVal = Double(aqiDouble.pm10Value!)
-                    AqiViewController.aqiList.append(doubleVal!)
-                    //MARK: 나중에 채워
-                }
+                let pm10Val: String = self.aqiDataSet[0].list![0].pm10Value ?? ""
+                let pm25Val: String = self.aqiDataSet[0].list![0].pm25Value ?? ""
+                self.pm10Label.text = self.getPm10String(pm10: pm10Val) + " " + pm10Val + "㎍/㎥"
+                self.pm25Label.text = self.getPm25String(pm25: pm25Val) + " " + pm25Val + "㎍/㎥"
+                
+                AqiChartView.playAnimation()
             }
         } catch let e as NSError {
             print(e.localizedDescription)
@@ -175,7 +196,7 @@ class AqiViewController: UIViewController, CLLocationManagerDelegate {
     
     //MARK: 날씨 API 연결
     func connectWeatherAPI() {
-        let weatherURLString = ""
+        let weatherURLString = "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=853c909f0f8639d63344ec1b9f73c12a"
         let weatherURL = URL(string: weatherURLString)!
         do {
             let weatherResponse = try String(contentsOf: weatherURL)
@@ -191,6 +212,26 @@ class AqiViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    
+    @IBAction func clickPm10Btn(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "PopupStoryboard", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "PopupViewController") as! PopupViewController
+        vc.isPm10 = true
+        vc.pm10 = self.aqiDataSet[0].list![0].pm10Value!
+        vc.modalPresentationStyle = .overCurrentContext
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func clickPm25Btn(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "PopupStoryboard", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "PopupViewController") as! PopupViewController
+        vc.isPm10 = false
+        vc.pm25 = self.aqiDataSet[0].list![0].pm25Value!
+        vc.modalPresentationStyle = .overCurrentContext
+        
+        self.present(vc, animated: true, completion: nil)
+    }
     
 
     //MARK: 미세먼지 수치에 따른 기준(pm 10)
