@@ -18,24 +18,22 @@ class AqiChartView: MacawView {
     static let lineWidth: Double = 400
     
     static let dataDivisor = Double(maxValue/maxValueLineHeight)
-    static let adjustedData: [Double] = aqiBars.map({$0.aqiIndex / dataDivisor})
-    static var animations:[Animation] = []
+    static let adjustedData: [Double] = aqiBars.map({ $0.aqiIndex / dataDivisor }) // $0 : each item
+    static var animations: [Animation] = []
     
-    
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder){
         super.init(node: AqiChartView.createChart(), coder: aDecoder)
         backgroundColor = UIColor.lightGray
-        
     }
     
-    private static func createChart() -> Group {
+    private static func createChart() -> Group { // group : array of nodes
         var items:[Node] = addYAxisItems() + addXAxisItems()
         items.append(createBars())
         
         return Group(contents: items, place: .identity)
     }
     
-    private static func addYAxisItems() -> [Node] {
+    private static func addYAxisItems() -> [Node]{
         let maxLines = 6
         let yAxisHeight: Double = 200
         let lineSpacing: Double = 30
@@ -44,19 +42,20 @@ class AqiChartView: MacawView {
         
         for i in 1...maxLines {
             let y = yAxisHeight - (Double(i) * lineSpacing)
-            let valueLine = Line(-5, y, lineWidth, y).stroke(fill: Color.white)
+            let valueLine = Line(x1: -5, y1: y, x2: lineWidth, y2: y).stroke(fill: Color.white)
             newNodes.append(valueLine)
         }
+        
         return newNodes
     }
     
-    private static func addXAxisItems() -> [Node] {
+    private static func addXAxisItems() -> [Node]{
         let chartBaseY: Double = 200
         var newNodes: [Node] = []
         
         for i in 1...adjustedData.count {
-            let x = (Double(i) * 50)
-            let valueText = Text(text: aqiBars[i - 1].time, align: .max, baseline: .mid, place: .move(dx: x - 8, dy: chartBaseY + 15))
+            let x = (Double(i) * 50) // start
+            let valueText = Text(text: aqiBars[i-1].time, align: .max, baseline: .mid, place: .move(dx: x-8, dy: chartBaseY + 15))
             valueText.fill = Color.gray
             newNodes.append(valueText)
         }
@@ -65,31 +64,36 @@ class AqiChartView: MacawView {
         newNodes.append(xAxis)
         
         return newNodes
-        
     }
     
     private static func createBars() -> Group {
-        let fill = LinearGradient(degree: 90, from: Color(val: 0xff4704), to: Color(val: 0xff4704).with(a: 0.33))
-        let items = adjustedData.map {_ in Group() }
         
-        animations = items.enumerated().map({ (i: Int, item: Group) in
-            item.contentsVar.animation(delay: Double(i) * 0.2) { t in
-                let height = adjustedData[i] * t
-                let rect = Rect(Double(i) * 50 + 20, 200 - height, 20, height).round(rx: 7, ry: 7)
+        let fill = LinearGradient(degree: 90, from: Color(val: 0xff4704), to: Color(val: 0xff4704).with(a: 0.33))
+        let items = adjustedData.map { _ in Group() }
+        
+        // each bar animations
+        animations = items.enumerated().map { (i:Int, item:Group) in // i : index
+            item.contentsVar.animation(delay: Double(i)*0.2) { t in // animation : left to right
+                let height = adjustedData[i]*t
+                let rect = Rect(x: Double(i)*50+20, y: 200-height, w: 20, h: height).round(rx: 7, ry: 7)
                 
                 return [rect.fill(with: fill)]
             }
-        })
+        }
+        
         return items.group()
     }
     
-    //MARK: Animation Trigger
-    static func playAnimation() {
+    // MARK : Animation Trigger
+    static func playAnimations(){
+        // reload aqi data
         AqiChartView.aqiBars = createData()
+//        print(AqiChartView.aqiBars)
+        
         animations.combine().play()
     }
-    
-    //MARK: set Bar Data
+        
+    // MARK : set Bar Data
     static func createData() -> [AqiBar] {
         
         let aqi1 = AqiBar(time: "5시", aqiIndex: 45)
@@ -103,5 +107,5 @@ class AqiChartView: MacawView {
         
         return [aqi1, aqi2, aqi3, aqi4, aqi5, aqi6, aqi7, aqi8]
     }
-    
+
 }

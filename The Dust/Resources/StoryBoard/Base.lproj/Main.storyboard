@@ -16,46 +16,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ESn-pX-qX0">
-                                <rect key="frame" x="79" y="273" width="256" height="350"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ESn-pX-qX0">
+                                <rect key="frame" x="103.5" y="326" width="207.5" height="244.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The Dust" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEd-sR-Nu8">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Dust" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEd-sR-Nu8">
+                                        <rect key="frame" x="0.0" y="0.0" width="207.5" height="60"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="미세먼지 알림 서비스" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcl-0i-P78">
-                                        <rect key="frame" x="0.0" y="65" width="256" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미세먼지 알림 서비스" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcl-0i-P78">
+                                        <rect key="frame" x="0.0" y="65" width="207.5" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dust" translatesAutoresizingMaskIntoConstraints="NO" id="J4g-8j-rOy">
-                                        <rect key="frame" x="0.0" y="94" width="256" height="256"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J4g-8j-rOy">
+                                        <rect key="frame" x="28.5" y="94.5" width="150" height="150"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="8RU-7E-CXd"/>
+                                            <constraint firstAttribute="height" constant="150.5" id="iUv-MU-hn3"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="IEd-sR-Nu8" secondAttribute="trailing" id="2LZ-Ha-GjY"/>
-                                    <constraint firstItem="IEd-sR-Nu8" firstAttribute="leading" secondItem="ESn-pX-qX0" secondAttribute="leading" id="AAT-LK-Lzf"/>
-                                    <constraint firstItem="Hcl-0i-P78" firstAttribute="leading" secondItem="ESn-pX-qX0" secondAttribute="leading" id="Avk-Mc-uUl"/>
-                                    <constraint firstAttribute="trailing" secondItem="J4g-8j-rOy" secondAttribute="trailing" id="HfP-Dn-dfB"/>
-                                    <constraint firstAttribute="height" constant="350" id="PZ6-zb-FYd"/>
-                                    <constraint firstAttribute="width" constant="256" id="di6-Tm-lX1"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hcl-0i-P78" secondAttribute="trailing" id="fKE-8h-cxT"/>
-                                    <constraint firstItem="J4g-8j-rOy" firstAttribute="leading" secondItem="ESn-pX-qX0" secondAttribute="leading" id="o3F-E4-sGh"/>
-                                    <constraint firstItem="J4g-8j-rOy" firstAttribute="top" secondItem="Hcl-0i-P78" secondAttribute="bottom" constant="5" id="pnh-R2-Rdd"/>
-                                    <constraint firstItem="IEd-sR-Nu8" firstAttribute="top" secondItem="ESn-pX-qX0" secondAttribute="top" id="pz5-Ui-Dok"/>
-                                    <constraint firstItem="Hcl-0i-P78" firstAttribute="top" secondItem="IEd-sR-Nu8" secondAttribute="bottom" constant="5" id="ru6-n7-Gp4"/>
+                                    <constraint firstItem="Hcl-0i-P78" firstAttribute="leading" secondItem="ESn-pX-qX0" secondAttribute="leading" id="YAn-4F-kXC"/>
+                                    <constraint firstItem="IEd-sR-Nu8" firstAttribute="leading" secondItem="ESn-pX-qX0" secondAttribute="leading" id="YOf-22-M7Z"/>
+                                    <constraint firstItem="Hcl-0i-P78" firstAttribute="top" secondItem="IEd-sR-Nu8" secondAttribute="bottom" constant="5" id="eQ2-eJ-W4J"/>
+                                    <constraint firstItem="J4g-8j-rOy" firstAttribute="top" secondItem="Hcl-0i-P78" secondAttribute="bottom" constant="5" id="reJ-XN-1IY"/>
+                                    <constraint firstItem="IEd-sR-Nu8" firstAttribute="top" secondItem="ESn-pX-qX0" secondAttribute="top" id="rk3-pG-8fo"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hcl-0i-P78" secondAttribute="trailing" id="ywf-vz-gzG"/>
+                                    <constraint firstAttribute="trailing" secondItem="IEd-sR-Nu8" secondAttribute="trailing" id="zxH-qd-dmn"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="ESn-pX-qX0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EUh-b9-pph"/>
-                            <constraint firstItem="ESn-pX-qX0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YY4-D0-2m6"/>
+                            <constraint firstItem="ESn-pX-qX0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="10y-ZB-hTF"/>
+                            <constraint firstItem="ESn-pX-qX0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vhT-hl-eBN"/>
                         </constraints>
                     </view>
                     <connections>
@@ -68,7 +68,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dust" width="512" height="512"/>
+        <image name="bell.fill" catalog="system" width="128" height="124"/>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

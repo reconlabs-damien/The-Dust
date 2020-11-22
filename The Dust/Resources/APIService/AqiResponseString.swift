@@ -21,7 +21,6 @@ struct AqiResponseString: Codable {
 }
 
 // MARK: AqiResponseString convenience initializers and mutators
-
 extension AqiResponseString {
     init(data: Data) throws {
         self = try newJSONDecoder().decode(AqiResponseString.self, from: data)
@@ -91,7 +90,6 @@ struct ArpltnInforInqireSVCVo: Codable {
 }
 
 // MARK: ArpltnInforInqireSVCVo convenience initializers and mutators
-
 extension ArpltnInforInqireSVCVo {
     init(data: Data) throws {
         self = try newJSONDecoder().decode(ArpltnInforInqireSVCVo.self, from: data)

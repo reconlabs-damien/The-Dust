@@ -113,6 +113,8 @@ class AqiViewController: UIViewController, CLLocationManagerDelegate {
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
         }
+        
+        //이미 허용인 경우
         if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             self.firstSetting()
         }
@@ -137,10 +139,10 @@ class AqiViewController: UIViewController, CLLocationManagerDelegate {
         
         geocoder.reverseGeocodeLocation(findLocation, preferredLocale: locale) { (placemarks, error) in
             if let address: [CLPlacemark] = placemarks {
-                if let area: String = address.last?.locality {
+                if let area: String = address.last?.name {
                     self.addressLabel.text = area
                 }
-                if let name:String = address.last?.name {
+                if let name:String = address.last?.locality {
                     self.connectAqiAPI(region: name)
                     self.weatherAddLabel.text = name
                 }
@@ -171,7 +173,7 @@ class AqiViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     //MARK: 미세먼지 API 연결 + 미세먼지 수치 뷰에 그리기
-    func connectAqiAPI(region: String) {
+    func connectAqiAPI(region: String){
         let aqiURLString = AqiService.shared.makeAqiAddress(region: region)
         let aqiURL = URL(string: aqiURLString)!
         
@@ -182,12 +184,13 @@ class AqiViewController: UIViewController, CLLocationManagerDelegate {
             if let object = try? decoder.decode(AqiResponseString.self, from: data) {
                 self.aqiDataSet = [object] as! [AqiResponseString]
                 
+                
                 let pm10Val: String = self.aqiDataSet[0].list![0].pm10Value ?? ""
                 let pm25Val: String = self.aqiDataSet[0].list![0].pm25Value ?? ""
-                self.pm10Label.text = self.getPm10String(pm10: pm10Val) + " " + pm10Val + "㎍/㎥"
-                self.pm25Label.text = self.getPm25String(pm25: pm25Val) + " " + pm25Val + "㎍/㎥"
+                self.pm10Label.text = self.getPm10String(pm10: pm10Val) + " " + pm10Val + " ㎍/㎥"
+                self.pm25Label.text = self.getPm25String(pm25: pm25Val) + " " + pm25Val + " ㎍/㎥"
                 
-                AqiChartView.playAnimation()
+                AqiChartView.playAnimations()
             }
         } catch let e as NSError {
             print(e.localizedDescription)
@@ -195,17 +198,22 @@ class AqiViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     //MARK: 날씨 API 연결
-    func connectWeatherAPI() {
+    func connectWeatherAPI(){
         let weatherURLString = "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=853c909f0f8639d63344ec1b9f73c12a"
         let weatherURL = URL(string: weatherURLString)!
+        
         do {
             let weatherResponse = try String(contentsOf: weatherURL)
             guard let weatherData = weatherResponse.data(using: .utf8) else { return }
             let weatherDecoder = JSONDecoder()
             if let weatherObject = try? weatherDecoder.decode(WeatherResponseString.self, from: weatherData) {
-                self.bigWeatherLabel.text = String(format: "%.f", weatherObject.main.temp - 273.15) + "°C"
-                self.maxCelsiusLabel.text = "최고" + String(format: "%.f", weatherObject.main.tempMin - 273.15) + "°C"
-                self.minCelsiusLabel.text = "최저" + String(format: "%.f", weatherObject.main.tempMax - 273.15) + "°C"
+                
+                self.bigWeatherLabel.text = String(format: "%.f", weatherObject.main.temp - 273.15) + " °C"
+                
+                self.maxCelsiusLabel.text = "최고 " + String(format: "%.f", weatherObject.main.tempMin-273.15) + " °C"
+                
+                self.minCelsiusLabel.text = "최저 " + String(format: "%.f", weatherObject.main.tempMax-273.15) + " °C"
+                
             }
         } catch let e as NSError {
             print(e.localizedDescription)
