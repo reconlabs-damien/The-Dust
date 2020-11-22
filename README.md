@@ -10,17 +10,7 @@
 ## __Screenshot__
 
 
-### ___#1___
-<img src="Take-Off/이미지/Screenshot/LoginController.png" width="200" height="400"><img src="Take-Off/이미지/Screenshot/SignupController.png" width="200" height="400"> <img src="Take-Off/이미지/Screenshot/MainController.gif" width="200" height="400"> <img src="Take-Off/이미지/Screenshot/PostController.png" width="200" height="400"> 
-
-
-### ___#2___
-<img src="Take-Off/이미지/Screenshot/MessageController.png" width="200" height="400"> <img src="Take-Off/이미지/Screenshot/MessageController2.png" width="200" height="400">  <img src="Take-Off/이미지/Screenshot/MessageController3.png" width="200" height="400"> <img src="Take-Off/이미지/Screenshot/MessageController4.png" width="200" height="400"> 
-
-
-### ___#3___
-<img src="Take-Off/이미지/Screenshot/AddPostController.png" width="200" height="400"> <img src="Take-Off/이미지/Screenshot/CalendarController.png" width="200" height="400"> <img src="Take-Off/이미지/Screenshot/UserprofileController.png" width="200" height="400"> 
-
+<img src="The-Dust/image/MainController.png" width="200" height="400"><img src="The-Dust/image/AqiMapController.png" width="200" height="400"> <img src="The-Dust/image/MenuController.png" width="200" height="400">
 
 
 ## __Library__
