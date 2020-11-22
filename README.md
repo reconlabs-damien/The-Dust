@@ -10,7 +10,7 @@
 ## __Screenshot__
 
 
-<img src="The-Dust/image/MainController.png" width="200" height="400"><img src="The-Dust/image/AqiMapController.png" width="200" height="400"> <img src="The-Dust/image/MenuController.png" width="200" height="400">
+<img src="image/MainController.png" width="200" height="400"><img src="image/AqiMapController.png" width="200" height="400"> <img src="image/MenuController.png" width="200" height="400">
 
 
 ## __Library__
